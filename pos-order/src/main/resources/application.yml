@@ -1,0 +1,16 @@
+server:
+  port: 3333
+
+spring:
+  application:
+    name: order-service
+  cloud:
+    stream:
+      bindings:
+        orderOutput:
+          destination: orderOutput
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:1111/eureka/

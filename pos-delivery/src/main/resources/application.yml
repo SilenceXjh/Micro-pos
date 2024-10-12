@@ -1,0 +1,18 @@
+spring:
+  application:
+    name: delivery-service
+  cloud:
+    function:
+      definition: acceptOrder
+    stream:
+      function:
+        bindings:
+          acceptOrder-in-0: orderOutput
+
+server:
+  port: 4444
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:1111/eureka/
